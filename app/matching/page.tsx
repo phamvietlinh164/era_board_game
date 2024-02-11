@@ -14,6 +14,11 @@ const allGirlArr = [
   'g8',
   'g9',
   'g10',
+  'g11',
+  'g12',
+  'g13',
+  'g14',
+  'g15'
 ]
 
 const allBoyArr = [
@@ -27,6 +32,11 @@ const allBoyArr = [
   'b8',
   'b9',
   'b10',
+  'b11',
+  'b12',
+  'b13',
+  'b14',
+  'b15'
 ]
 
 
