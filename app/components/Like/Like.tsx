@@ -6,7 +6,7 @@ interface ILike {
 
 export default function Like({name, onChange}: ILike) {
   return (
-    <div className="flex">
+    <div className="flex justify-center">
       <span className="w-10">{name}:</span>
       <LikeInput onChange={onChange} name={name} option={1} placeHolder={'option 1'}/>
       <LikeInput onChange={onChange} name={name} option={2} placeHolder={'option 2'}/>

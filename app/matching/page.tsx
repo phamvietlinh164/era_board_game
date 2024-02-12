@@ -55,7 +55,7 @@ export default function Matching() {
   const renderResult = (list: any[]) => {
     if(list.length === 0) return null
     return list.map((element: any, index: number) => {
-      return <p key={index}>{`${element.key.split('-')[0]}-${element.key.split('-')[2]}`}</p>
+      return <p className='flex justify-center' key={index}>{`${element.key.split('-')[0]}-${element.key.split('-')[2]}`}</p>
     })
   }
 
@@ -76,26 +76,28 @@ export default function Matching() {
   }
   
   return (
-    <div className="">
-      <div className="container mx-auto flex">
-        <div className='columns-1 w-1/2'>
+    <div className="container mx-auto">
+      <h1 className='flex justify-center'>Matching application</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className=''>
           {renderInput(allGirlArr)}
         </div>
-        <br/>
-        <div className='columns-1 w-1/2'>
+        <div className=''>
           {renderInput(allBoyArr)}
         </div>
       </div>
 
 
-
+      <br />
       <div className="container mx-auto">
-        <button 
-        className="p-1 border-2 border-solid border-gray-400 rounded-sm shadow-xl" 
-        onClick={() => handleMatch()}>
-          Match
-        </button>
-        <div className='boy-section columns-12'>
+        <div className='flex justify-center'>
+          <button 
+          className="p-1 border-2 border-solid border-gray-400 rounded-sm shadow-xl" 
+          onClick={() => handleMatch()}>
+            Match
+          </button>
+        </div>
+        <div className=''>
           {renderResult(result)}
         </div>
       </div>
