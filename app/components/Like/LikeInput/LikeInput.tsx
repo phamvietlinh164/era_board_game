@@ -7,7 +7,7 @@ export default function Like({onChange, name, option, placeHolder}: any) {
         onChange((prev: any) => {
           return {
             ...prev,
-            [`${name}-${option}`]: `${event.target.value}`
+            [`${name}-${option}`]: `${event.target.value}`.toLowerCase()
           }
         })
       }
